@@ -9,30 +9,13 @@ threshold=1e-4;
 % clusters=random_clusters(k,n);
 %%%%%%%%%%
 load location.txt;
-% load clusters.txt;
+load clusters.txt;
 k=5; n=size(location,1);  %两个需初始化的条件
-clusters=random_clusters(k,n);
+% clusters=random_clusters(k,n);
 %%%%%%%%%%
 
-% centers=calcCenters(clusters,location,k,n);
-% calcClusters(centers,location,k,n);
 [clusters,centers]=kmeans_with_singlelink(threshold,k,n,clusters,location);
 drawFigure(location,clusters,centers,k,-1);
-% x=location(:,1);y=location(:,2);
-% figure;
-% scatter(x,y,'filled');
-% grid on;
-% for i=1:size(x,1)
-%     hold on;
-%     text(x(i)+0.2,y(i),{i});%在图上显示文
-% end
-% scatter(centers(:,1),centers(:,2),'filled','r');
-% for i=1:size(centers,1)
-%     hold on;
-%     text(centers(i,1)+0.2,centers(i,2),{i});%在图上显示文
-% end
-% axis([-0.5,20.5,-0.5,20.5]);
-% hold off;
 
 
 function [l,d]=random_initXY(n,k)
