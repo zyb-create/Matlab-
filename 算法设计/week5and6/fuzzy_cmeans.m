@@ -15,6 +15,14 @@ for i=2:3:5
         
     end
 end
+% for i=3:3
+%     for m=i:i+1
+%         subplot(1,2,m-2);
+%         [clusters,centers]=fuzzy(m,k,n,location,threshold);
+%         drawFigure(location,clusters,centers,k,m);
+%         
+%     end
+% end
 
 function u=randomU(k,n)
 u=zeros(k,n);
