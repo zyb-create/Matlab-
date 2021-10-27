@@ -3,15 +3,15 @@ clc,clear;
 % N=100;
 threshold=1e-4;
 % dis=zeros(K,N);
-% k=5; n=25;  %两个需初始化的条件
+% k=5; n=25;  %两个�?初始化的条件
 % centers=zeros(k,2);
 % [location,dis]=random_initXY(n,k);
 % clusters=random_clusters(k,n);
 %%%%%%%%%%
 load location.txt;
-load clusters.txt;
-k=5; n=size(location,1);  %两个需初始化的条件
-% clusters=random_clusters(k,n);
+% load clusters.txt;
+k=5; n=size(location,1);  %两个�?初始化的条件
+clusters=random_clusters(k,n);
 %%%%%%%%%%
 
 [clusters,centers]=kmeans_with_singlelink(threshold,k,n,clusters,location);

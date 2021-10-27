@@ -1,10 +1,10 @@
 clc,clear;
-n=309;
+n=305;
 k=5;
 location=random_initXY(n,k,[1 200]);
 scatter(location(:,1),location(:,2),16);
 axis([-10,210,-10,210]);
-%%%%%%%%%%%%%%%%向文件中写数据
+%%%%%%%%%%%%%%%%向文件中写数�?
 % fid=fopen('location.txt','wt');
 % fprintf(fid,'%d %d\n',location');
 % fclose(fid);
